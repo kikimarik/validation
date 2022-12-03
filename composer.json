@@ -1,0 +1,31 @@
+{
+    "name": "kikimarik/validation",
+    "description": "The PHP package for validation raw data",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "kikimarik\\validation\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "kikimarik\\validation\\test\\": "test"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey Sorokin",
+            "email": "kikimarik@inbox.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">= 7.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9.2",
+        "phpunit/phpunit": "^9.5.26"
+    }
+}
