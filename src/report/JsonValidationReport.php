@@ -18,9 +18,6 @@ final class JsonValidationReport implements ValidationReport, JsonSerializable
 
     public function add(string $field, ValidationError $error): ValidationReport
     {
-        /**
-         * TODO implements multiple errors for one field
-         */
         $this->errors[$field] = $error;
         return $this;
     }
