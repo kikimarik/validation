@@ -20,7 +20,7 @@ jobs:
       - name: Unit tests by PHPUnit
         uses: php-actions/phpunit@v3
         with:
-          args: test
+          args: --bootstrap vendor/autoload.php test
       - name: Static analyse by phpstan
         uses: docker://oskarstark/phpstan-ga
         with:
