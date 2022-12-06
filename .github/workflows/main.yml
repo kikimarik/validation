@@ -38,6 +38,6 @@ jobs:
         args: analyse src/ --level=8
 
     - name: PHPUnit Tests
-      uses: php-actions/phpunit@v3
+      uses: docker://phpunit/phpunit
       with:
-        php_version: 7.4
+        args: test
