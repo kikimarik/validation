@@ -28,9 +28,6 @@ abstract class AbstractValidationRequest implements ValidationRequest
         }
         $fields = explode("|", $field);
         foreach ($fields as $field) {
-            /**
-             * TODO implements multiple rule for one field
-             */
             $this->rules[trim($field)] = $rule;
         }
         return $this;

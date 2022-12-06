@@ -18,9 +18,6 @@ final class JsonValidationReport implements ValidationReport, JsonSerializable
 
     public function add(string $field, ValidationError $error): ValidationReport
     {
-        /**
-         * TODO implements multiple errors for one field
-         */
         $this->errors[$field] = $error;
         return $this;
     }
@@ -31,9 +28,9 @@ final class JsonValidationReport implements ValidationReport, JsonSerializable
     }
 
     /**
-     * @inheritDoc
+     * @return array<string, array<string, string>>
      */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         $errors = [];
         foreach ($this->errors as $field => $error) {
