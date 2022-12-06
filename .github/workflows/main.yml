@@ -33,7 +33,7 @@ jobs:
       run: composer install --prefer-dist --no-progress
       
     - name: Static analyse by phpstan
-      uses: OskarStark/phpstan-ga@1.7.0
+      uses: docker://oskarstark/phpstan-ga
       with:
         args: analyse src/ --level=8
         
