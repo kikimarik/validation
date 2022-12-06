@@ -39,4 +39,4 @@ jobs:
         
     
     - name: PHPUnit tests
-      uses: php-actions/phpunit@v3
+      uses: ./vendor/bin/phpunit test
