@@ -30,7 +30,7 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
-      run: composer install --dev --prefer-dist --no-progress
+      run: composer install --prefer-dist --no-progress
       
     - name: Static analyse by phpstan
       uses: docker://oskarstark/phpstan-ga
@@ -39,3 +39,5 @@ jobs:
 
     - name: PHPUnit Tests
         uses: php-actions/phpunit@v3
+        with:
+          php_version: 7.4
