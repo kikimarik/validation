@@ -19,7 +19,8 @@ jobs:
       - uses: php-actions/composer@v6
       - name: Unit tests by PHPUnit
         uses: php-actions/phpunit@v3
-        args: test
+        with:
+          args: test
       - name: Static analyse by phpstan
         uses: docker://oskarstark/phpstan-ga
         with:
